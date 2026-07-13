@@ -19,7 +19,7 @@ This work was funded by the **European Union** through the **European Research C
 
 ###  Note on Parametrization & Simulation Abstractions
 * **`K` vs `n`:** In the provided codebase, the variable `K` represents the **number of read copies/samples per strand**, which is formally denoted as **$n$** in the text of the paper. The code's internal sequence windows (`160` states) map directly to the strand block lengths ($E$)
-* **Substitution Channel Equivalence:** To facilitate streamlined tensor processing, the data generation blocks utilize a symmetric uniform 4-ary substitution model (transitions to all four bases with probability $p_s/4$) - please be careful (Figs. 5-9 states that $p_d = p_i = \frac{4}{3}p_s$ for compensation)
+* **Substitution Channel Equivalence:** To facilitate streamlined tensor processing, the data generation blocks utilize a symmetric uniform 4-ary substitution model (transitions to all four bases with probability $p_s/4$) - please be careful (Figs. 5-9 states that $p_d = p_i = \frac{4}{3}p_s$ for compensation) -> This is only for the learning-based approaches - the analiytical approach uses exactly the same channel model as described in the code. 
 
 
 
