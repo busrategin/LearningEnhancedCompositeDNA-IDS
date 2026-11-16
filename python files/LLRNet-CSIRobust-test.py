@@ -75,6 +75,7 @@ def model_to_llr_p0_over_p1(model: nn.Module, X_counts_t: torch.Tensor) -> torch
     X_counts_t: [B,160,4] float32
     returns:    [B,480] float32
     """# [B,160,3]
+    z = model(X_counts_t)  # [B,160,3]
     z480 = z.reshape(X_counts_t.size(0), 480)
     return -z480
 
